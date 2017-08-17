@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<!-- <p id="notice"><%= notice %></p> -->
+
+<h1>Ingresar Mascota</h1>
+<div class="container">
+  <table class="table">
+    <thead>
+  <tr> 
+    <th>Mascota</th> 
+    <th>Nombre</th>  
+    <th>Raza</th>
+    <th>Sexo</th>
+    </tr> 
+  </thead>
+
+  <tbody>
+    <% @ingresars.each do |ingresar| %>
+      
+      <tr>
+        
+        <td><%= ingresar.Mascota %></td>
+        <td><%= ingresar.Nombre %></td>
+        <td><%= ingresar.Raza %></td>
+        <td><%= ingresar.Sexo %></td>
+        <td><%= link_to 'Mostrar', ingresar %></td>
+        <td><%= link_to 'Editar', edit_ingresar_path(ingresar) %></td>
+        <td><%= link_to 'Eliminar', ingresar, method: :delete, data: { confirm: 'Esta seguro que quiere eliminar?' 
+        } %></td>
+      </tr>
+      
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<form>
+<input class="My Button" onclick="window.location.href='/ingresars/new'" type="button" value="Agregar Mascota"></form>
+<!-- <%= link_to 'Ingresar Mascota', new_ingresar_path %>  -->

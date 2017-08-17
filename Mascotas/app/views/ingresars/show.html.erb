@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mascota:</strong>
+  <%= @ingresar.Mascota %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @ingresar.Nombre %>
+</p>
+
+<p>
+  <strong>Raza:</strong>
+  <%= @ingresar.Raza %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @ingresar.Sexo %>
+</p>
+
+<%= link_to 'Edit', edit_ingresar_path(@ingresar) %> |
+<%= link_to 'Back', ingresars_path %>

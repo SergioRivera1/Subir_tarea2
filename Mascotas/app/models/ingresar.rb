@@ -1,0 +1,2 @@
+class Ingresar < ApplicationRecord
+end

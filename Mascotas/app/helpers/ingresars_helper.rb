@@ -1,0 +1,2 @@
+module IngresarsHelper
+end
