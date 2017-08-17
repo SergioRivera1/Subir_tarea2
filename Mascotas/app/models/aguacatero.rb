@@ -1,0 +1,2 @@
+class Aguacatero < ApplicationRecord
+end

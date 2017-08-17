@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @aguacatero.name %>
+</p>
+
+<p>
+  <strong>Raza1:</strong>
+  <%= @aguacatero.raza1 %>
+</p>
+
+<p>
+  <strong>Raza2:</strong>
+  <%= @aguacatero.raza2 %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @aguacatero.sexo %>
+</p>
+
+<%= link_to 'Edit', edit_aguacatero_path(@aguacatero) %> |
+<%= link_to 'Back', aguacateros_path %>

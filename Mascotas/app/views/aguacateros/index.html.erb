@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aguacateros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Raza1</th>
+      <th>Raza2</th>
+      <th>Sexo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aguacateros.each do |aguacatero| %>
+      <tr>
+        <td><%= aguacatero.name %></td>
+        <td><%= aguacatero.raza1 %></td>
+        <td><%= aguacatero.raza2 %></td>
+        <td><%= aguacatero.sexo %></td>
+        <td><%= link_to 'Show', aguacatero %></td>
+        <td><%= link_to 'Edit', edit_aguacatero_path(aguacatero) %></td>
+        <td><%= link_to 'Destroy', aguacatero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aguacatero', new_aguacatero_path %>
